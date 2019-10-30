@@ -11,7 +11,7 @@ export class User {
     repulsive?: number;
     vicious?: boolean;
 
-    constructor(input: User) {
+    constructor(input?: User) {
         Object.assign(this, input);
     }
 }

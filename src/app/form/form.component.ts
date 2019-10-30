@@ -50,8 +50,9 @@ export class FormComponent implements OnInit {
     console.log(this.user);
   }
 
-  createMonster() {
-    this.user.picture = "blabla";
+  createMonster(picture) {
+    this.user.picture = picture;
+    console.log(this.user);
   }
 
   // sendMonster() {
