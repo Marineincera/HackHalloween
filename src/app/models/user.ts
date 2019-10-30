@@ -2,10 +2,15 @@ export class User {
     id: number;
     name: string;
     age: number;
-    sexe: string;
-    description: string;
-    selects: string[];
-    image: string;
+    sex: string;
+    bloody?: boolean;
+    describe: string;
+    kawai: boolean;
+    levelscary?: number;
+    nocturnal?: boolean;
+    picture: string;
+    repulsive?: number;
+    vicious?: boolean;
 
     constructor(input: User) {
         Object.assign(this, input);
