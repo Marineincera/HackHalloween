@@ -1,1 +1,31 @@
-<p>form works!</p>
+<div class="form-wrapper">
+    <form (submit)="myForm.valid" #myForm="ngForm">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" [(ngModel)]="userName" #nameRef="ngModel"
+                placeholder="un nom bien terrifiant !" required>
+            <div *ngIf="nameRef?.errors?.required && myForm.submitted" class="control">
+                <p>Il nous faut ton nom de monstre pour aller plus loin ! </p>
+            </div>
+        </div>
+        <div>
+            <label for="age">Âge</label>
+            <input type="number" name="age" [(ngModel)]="userAge" #ageRef="ngModel" placeholder="" required>
+            <div *ngIf="ageRef?.errors?.required && myForm.submitted" class="control">
+                <p>Sois pas si timide ! </p>
+            </div>
+            <div *ngIf="ageRef?.errors?.number && myForm.submitted" class="control">
+                <p>Entre un nombre</p>
+            </div>
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea name="description" [(ngModel)]="userDescription" #descriptionRef="ngModel"
+                placeholder="J'aime les haricots" required></textarea>
+            <div *ngIf="descriptionRef?.errors?.required && myForm.submitted" class="control">
+                <p>Donne nous ce petit détail qui fait de toi un monstre si attachant !</p>
+            </div>
+        </div>
+        <button type="submit" (click)="addMonster()">Continues ton inscription</button>
+    </form>
+</div>
