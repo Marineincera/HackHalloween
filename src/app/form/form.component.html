@@ -3,30 +3,37 @@
 <div class="form-wrapper">
     <form (submit)="myForm.valid" #myForm="ngForm">
         <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" [(ngModel)]="user.name" #nameRef="ngModel"
-                placeholder="un nom bien terrifiant !" required>
-            <div *ngIf="nameRef?.errors?.required && myForm.submitted" class="control">
-                <p>Il nous faut ton nom de monstre pour aller plus loin ! </p>
-            </div>
+            <mat-form-field>
+                <!-- <label for="name">Name</label> -->
+                <input matInput type="text" name="name" [(ngModel)]="user.name" #nameRef="ngModel"
+                    placeholder="un nom bien terrifiant !" required>
+                <div *ngIf="nameRef?.errors?.required && myForm.submitted" class="control">
+                    <p>Il nous faut ton nom de monstre pour aller plus loin ! </p>
+                </div>
+            </mat-form-field>
         </div>
         <div>
-            <label for="age">Âge</label>
-            <input type="number" name="age" [(ngModel)]="user.age" #ageRef="ngModel" placeholder="" required>
-            <div *ngIf="ageRef?.errors?.required && myForm.submitted" class="control">
-                <p>Sois pas si timide ! </p>
-            </div>
-            <div *ngIf="ageRef?.errors?.number && myForm.submitted" class="control">
-                <p>Entre un nombre</p>
-            </div>
+            <mat-form-field>
+                <!-- <label for="age">Âge</label> -->
+                <input matInput type="number" name="age" [(ngModel)]="user.age" #ageRef="ngModel"
+                    placeholder="Quel âge as-tu ?" required>
+                <div *ngIf="ageRef?.errors?.required && myForm.submitted" class="control">
+                    <p>Sois pas si timide ! </p>
+                </div>
+                <div *ngIf="ageRef?.errors?.number && myForm.submitted" class="control">
+                    <p>Entre un nombre</p>
+                </div>
+            </mat-form-field>
         </div>
         <div>
-            <label for="description">Description</label>
-            <textarea name="description" [(ngModel)]="user.describe" #descriptionRef="ngModel"
-                placeholder="J'aime les haricots" required></textarea>
-            <div *ngIf="descriptionRef?.errors?.required && myForm.submitted" class="control">
-                <p>Donne nous ce petit détail qui fait de toi un monstre si attachant !</p>
-            </div>
+            <mat-form-field>
+                <!-- <label for="description">Description</label> -->
+                <textarea matInput name="description" [(ngModel)]="user.describe" #descriptionRef="ngModel"
+                    placeholder="J'aime les haricots" required></textarea>
+                <div *ngIf="descriptionRef?.errors?.required && myForm.submitted" class="control">
+                    <p>Donne nous ce petit détail qui fait de toi un monstre si attachant !</p>
+                </div>
+            </mat-form-field>
         </div>
 
         <section class="example-section">
@@ -44,4 +51,5 @@
 <app-selects (addBloody)="changeBloody($event)" (addKawai)="changeKawai($event)"
     (addNocturnal)="changeNocturnal($event)" (addVicious)="changeVicious($event)"></app-selects>
 
-<button (click)="showBloody()"></button>
+<app-photo-select (sendAvatar)="createMonster($event)"></app-photo-select>
+<button (click)=sendMonster()>envoyer</button>

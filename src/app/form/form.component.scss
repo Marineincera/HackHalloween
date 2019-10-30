@@ -11,7 +11,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: gray;
+        border: 1px solid gray;
         height: 80vh;
         justify-content: center;
    
@@ -20,7 +20,7 @@
             display: flex;
             flex-direction: column;
             width: 50%;
-           
+            margin-left: -3vw;
 
             input, textarea{
                 width: 100%;
@@ -48,5 +48,14 @@
     }
 .example-margin{
     margin: 10px;
+}
+
+mat-form-field{
+    width: fit-content;
+    margin: -3vw;
+}
+
+mat-form-field-wrapper{
+    margin-left: -3vw;
 }
 }

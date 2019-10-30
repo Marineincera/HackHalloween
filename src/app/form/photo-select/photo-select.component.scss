@@ -1,0 +1,28 @@
+
+.photo-display{
+        text-align: center;
+    } 
+
+img{
+        width: 30%;
+    }
+
+
+
+// mat-radio-button{
+//     width: 40%;
+// }
+
+mat-radio-label{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+}
+
+mat-radio-label{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+} 

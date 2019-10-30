@@ -1,10 +1,11 @@
 <h1>Etape 2 sur 3: Quelle(s) caractéristique(s) te correspond(ent) ?</h1>
 
-<section class="example-section">
-    <mat-checkbox class="example-margin" [(ngModel)]="bloody" value="true">Bloody</mat-checkbox>
-    <mat-checkbox class="example-margin" [(ngModel)]="kawai" value="true">Kawai</mat-checkbox>
-    <mat-checkbox class="example-margin" [(ngModel)]="nocturnal" value="true">nocturnal</mat-checkbox>
-    <mat-checkbox class="example-margin" [(ngModel)]="vicious" value="true">Vicious</mat-checkbox>
-
+<section class="tendance-section">
+    <div class="checkbox">
+        <mat-checkbox [(ngModel)]="bloody" value="true">Bloody</mat-checkbox>
+        <mat-checkbox [(ngModel)]="kawai" value="true">Kawai</mat-checkbox>
+        <mat-checkbox [(ngModel)]="nocturnal" value="true">nocturnal</mat-checkbox>
+        <mat-checkbox [(ngModel)]="vicious" value="true">Vicious</mat-checkbox>
+    </div>
+    <button (click)="sendTendance()">Choisis un Avatar</button>
 </section>
-<button (click)="sendTendance()">Choisir un Avatar</button>

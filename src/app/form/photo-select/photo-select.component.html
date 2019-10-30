@@ -1,1 +1,10 @@
-<p>photo-select works!</p>
+<div class="photo-wrapper">
+    <mat-radio-group aria-label="Select an option" class="photo-section">
+        <div *ngFor="let user of users, let i = index" class="photos-display">
+            <mat-radio-button value={{i}}> <img src="{{user.picture}}" alt="">
+            </mat-radio-button>
+        </div>
+    </mat-radio-group>
+</div>
+
+<button (click)="addPhoto()"></button>
