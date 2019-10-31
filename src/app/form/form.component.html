@@ -29,7 +29,7 @@
             <mat-form-field>
                 <!-- <label for="description">Description</label> -->
                 <textarea matInput name="description" [(ngModel)]="user.describe" #descriptionRef="ngModel"
-                    placeholder="J'aime les haricots" required></textarea>
+                    placeholder="Petite description" required></textarea>
                 <div *ngIf="descriptionRef?.errors?.required && myForm.submitted" class="control">
                     <p>Donne nous ce petit détail qui fait de toi un monstre si attachant !</p>
                 </div>
