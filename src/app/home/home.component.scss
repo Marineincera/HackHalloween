@@ -12,12 +12,15 @@
 .title{
   background-color: white;
   width:50vh;
+  height:33vh;
+
 }
 
 .HTML{
   background-color: white;
   text-align: center;
-  margin:auto;
+  border:2px solid black;
+  border-radius:10px;
 }
 
 // Boutton
@@ -35,7 +38,9 @@ button{
 }
 // Titre h1
 h1{
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color:#FF9b3D;
-  text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  text-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.10);
 }
