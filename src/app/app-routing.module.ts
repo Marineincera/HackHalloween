@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SelectsComponent } from './form/selects/selects.component';
 import { PhotoSelectComponent } from './form/photo-select/photo-select.component';
+import { FormComponent } from './form/form.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,9 @@ const routes: Routes = [
   },
   {
     path: 'photo-select', component: PhotoSelectComponent
+  },
+  {
+    path: 'form', component: FormComponent
   }
 
 

@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http';
 
 import { FormComponent } from './form/form.component';
 import { SelectsComponent } from './form/selects/selects.component';
@@ -38,7 +37,6 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     FormsModule,
     HttpClientModule,
     MatCheckboxModule,
