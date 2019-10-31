@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { User } from '../models/user';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -24,7 +25,8 @@ export class FormComponent implements OnInit {
   };
 
 
-  constructor(private service: UserService) { }
+  constructor(private service: UserService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.service.getAll().subscribe((result) => { console.log(result); });

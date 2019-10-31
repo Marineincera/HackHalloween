@@ -5,7 +5,7 @@
         <div>
             <mat-form-field>
                 <!-- <label for="name">Name</label> -->
-                <input matInput type="text" name="name" [(ngModel)]="user.name" #nameRef="ngModel"
+                <input matInput type="text" name="name" [(ngModel)]="user.name" #nameRef="ngModel" app-selects
                     placeholder="un nom bien terrifiant !" required>
                 <div *ngIf="nameRef?.errors?.required && myForm.submitted" class="control">
                     <p>Il nous faut ton nom de monstre pour aller plus loin ! </p>
@@ -44,11 +44,10 @@
             </mat-radio-group>
         </section>
 
-        <button type="submit">Continues ton inscription</button>
+        <button type="submit"> Continues ton inscription</button>
     </form>
-
 </div>
-<app-selects (addBloody)="changeBloody($event)" (addKawai)="changeKawai($event)"
+<app-selects (addBloody)=" changeBloody($event)" (addKawai)="changeKawai($event)"
     (addNocturnal)="changeNocturnal($event)" (addVicious)="changeVicious($event)"></app-selects>
 
 <app-photo-select (sendAvatar)="createMonster($event)"></app-photo-select>

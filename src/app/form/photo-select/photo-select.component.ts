@@ -12,6 +12,7 @@ export class PhotoSelectComponent implements OnInit {
   user: User = new User();
   userPicture = '';
   id;
+
   @Output()
   sendAvatar = new EventEmitter<any>();
   constructor(private service: UserService) { }
@@ -32,10 +33,8 @@ export class PhotoSelectComponent implements OnInit {
     this.service.getPhotoById(this.id).subscribe((user) => {
       this.userPicture = user.picture;
       console.log(this.userPicture);
+      this.sendAvatar.emit(this.userPicture);
     });
   }
 
-  addPhoto() {
-    this.sendAvatar.emit(this.userPicture);
-  }
 }

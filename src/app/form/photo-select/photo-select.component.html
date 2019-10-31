@@ -1,6 +1,5 @@
 <div class="photo-wrapper">
-    <mat-radio-group [(ngModel)]="userPicture" (change)="sendPhoto()" aria-label="Select an option"
-        class="photo-section">
+    <mat-radio-group [(ngModel)]="userPicture" aria-label="Select an option" class="photo-section">
         <div *ngFor="let user of users; let i = index" class="photos-display">
             <div>
                 <img [src]="user.picture" alt="">
@@ -11,4 +10,4 @@
     </mat-radio-group>
 </div>
 
-<button (click)="addPhoto()">finir l'inscription</button>
+<button (click)="sendPhoto()">finir l'inscription</button>
