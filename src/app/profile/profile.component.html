@@ -1,1 +1,7 @@
-<p>profile works!</p>
+<div>
+  <img class="photo" src="{{users.picture}}" *ngIf="users"/>
+  <p>Description: {{users.describe}}</p>
+  <p>Levelscary:{{users.levelscary}}</p>
+  <p>repulsive:{{users.repulsive}}</p>
+  <button (click)="goTo()">Go choper</button>
+</div>
