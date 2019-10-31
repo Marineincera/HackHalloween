@@ -19,7 +19,7 @@ export class SelectsComponent implements OnInit {
   kawai: boolean;
   nocturnal: boolean;
   vicious: boolean;
-
+  isShown: boolean = false;
 
 
 
@@ -41,6 +41,7 @@ export class SelectsComponent implements OnInit {
     if (this.nocturnal === true) {
       this.addNocturnal.emit(this.nocturnal);
     }
+    this.isShown = true;
 
     console.log(this.bloody);
   }

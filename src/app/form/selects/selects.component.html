@@ -7,5 +7,6 @@
         <mat-checkbox [(ngModel)]="nocturnal" value="true">nocturnal</mat-checkbox>
         <mat-checkbox [(ngModel)]="vicious" value="true">Vicious</mat-checkbox>
     </div>
-    <button (click)="sendTendance()">Choisis un Avatar</button>
+    <button (click)="sendTendance()" [routerLink]="['/photoSelects']" routerLinkActive="router-link-active">Choisis un
+        Avatar</button>
 </section>

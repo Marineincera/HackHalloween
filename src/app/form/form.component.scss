@@ -1,20 +1,24 @@
 .form-wrapper{
-    width: 100vw;
-    height: 60vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     
+    
+    
 
     form{
-        width: 100%;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
 
         .control {
             font-size: 10px;
+            margin-bottom:30%;
         }
    
 
@@ -25,11 +29,11 @@
             margin-left: -3vw;
 
             input, textarea{
-                width: 100%;
+                width: 100vh;
+                text-align: center;
             }
 
-            textarea{
-            }
+            
             
             .control{
                 margin: 0px;
@@ -40,10 +44,21 @@
         }
         Div, button{
         margin: 2vh 0vw;
+        
         }
 
         button{
-            width: 40%;
+            width: 100%;
+            background-color: #FF9b3D;
+  box-shadow: none;
+  border-radius: 40px;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  padding: 10px 30px;
+  transition: background-color .2s ease, box-shadow .2s ease;
             
         }
 
@@ -66,4 +81,8 @@ h1{
     font-size: 20px;
     color: #ff9b3d;
     text-align: center;
+}
+.example-section{
+    width:100%;
+    height:100%;
 }

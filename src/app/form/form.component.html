@@ -1,6 +1,7 @@
 <h1>Première étape : Inscris toi ! </h1>
 
 <div class="form-wrapper">
+    <img src="../../assets/images/back.jpg">
     <form (submit)="myForm.valid" #myForm="ngForm">
         <div>
             <mat-form-field>
@@ -44,11 +45,12 @@
             </mat-radio-group>
         </section>
 
-        <button type="submit"> Continues ton inscription</button>
+        <button type="submit" [routerLink]="['/selects']" routerLinkActive="router-link-active"> Continues ton
+            inscription</button>
     </form>
 </div>
 <app-selects (addBloody)=" changeBloody($event)" (addKawai)="changeKawai($event)"
-    (addNocturnal)="changeNocturnal($event)" (addVicious)="changeVicious($event)"></app-selects>
+    (addNocturnal)="changeNocturnal($event)" (addVicious)="changeVicious($event)" *ngIf="isShown"></app-selects>
 
-<app-photo-select (sendAvatar)="createMonster($event)"></app-photo-select>
-<button (click)="sendMonster()">Valider l'inscription</button>
+<app-photo-select (sendAvatar)="createMonster($event)" *ngIf="isShown"></app-photo-select>
+<button (click)="sendMonster()" *ngIf="isShown">Valider l'inscription</button>

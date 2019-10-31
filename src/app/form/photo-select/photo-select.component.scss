@@ -1,17 +1,8 @@
-
-.photo-display{
-        text-align: center;
-        margin-bottom: 4vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    } 
-
-   
-
 img{
-        width: 30vw;
+        width: 10vw;
         display:flex;
+        flex-direction:row;
+
     }
 
 
@@ -20,6 +11,7 @@ img{
      width: 60%;
      display:flex;
      justify-content: center;
+     
  }
 
 mat-radio-label{
@@ -40,4 +32,18 @@ h1{
     font-size: 20px;
     color: #ff9b3d;
     text-align: center;
+}
+.finish{
+    width: 50%;
+background-color: #FF9b3D;
+    box-shadow: none;
+  border-radius: 40px;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  padding: 10px 30px;
+  transition: background-color .2s ease, box-shadow .2s ease;
+  align-items: center;
 }

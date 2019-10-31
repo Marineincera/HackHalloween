@@ -12,12 +12,14 @@ export class PhotoSelectComponent implements OnInit {
   user: User = new User();
   userPicture = '';
   id;
+  isShown: boolean = false;
 
   @Output()
   sendAvatar = new EventEmitter<any>();
   constructor(private service: UserService) { }
 
   ngOnInit() {
+    this.isShown = !this.isShown;
     // const id = 1;
     // this.service.getPhotoById(id).subscribe((user) => {
     //   this.picture = user.picture;

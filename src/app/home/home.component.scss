@@ -1,5 +1,5 @@
 .container{
-  background-image: url("/../../assets/images/images.jpeg");
+  background-color:  #FF9b3D;
   background-position: center;
   background-size: contain;
   height:97vh;
@@ -7,11 +7,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+
 }
 
 .title{
   background-color: white;
-  width: 53%;
+  width: 50vh;
+  height:50vh;
   
 
 }
@@ -27,6 +30,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin: 3vw;
+  padding-top:-10%;
 }
 
 
