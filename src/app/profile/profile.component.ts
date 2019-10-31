@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    const id = 10;
+    const id = 1;
     this.userService.getById(id).subscribe((users) => {
       this.users = users;
       console.log(this.users);
