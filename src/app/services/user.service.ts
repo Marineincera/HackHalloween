@@ -18,6 +18,6 @@ export class UserService {
     return this.http.get(UserService.URL + `/user/show/${id}`);
   }
   create(post): Observable<any> {
-    return this.http.put(UserService.URL + '/user/add', JSON.stringify(post));
+    return this.http.post(UserService.URL + '/user/add', JSON.stringify(post));
   }
 }

@@ -2,9 +2,11 @@
     <mat-radio-group [(ngModel)]="userPicture" (change)="sendPhoto()" aria-label="Select an option"
         class="photo-section">
         <div *ngFor="let user of users; let i = index" class="photos-display">
-            <img [src]="user.picture" alt="">
-            <mat-radio-button name="radiob" type="radio" [value]="i">
-            </mat-radio-button>
+            <div>
+                <img [src]="user.picture" alt="">
+                <mat-radio-button name="radiob" type="radio" [value]="i">
+                </mat-radio-button>
+            </div>
         </div>
     </mat-radio-group>
 </div>

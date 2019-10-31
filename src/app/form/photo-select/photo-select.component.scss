@@ -1,10 +1,18 @@
 
 .photo-display{
         text-align: center;
+        margin-bottom: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     } 
 
+    div{
+        width: 100%;
+    }
+
 img{
-        width: 30%;
+        width: 50vw;
     }
 
 
@@ -26,3 +34,9 @@ mat-radio-label{
     text-align: center;
     width: 20%;
 } 
+
+.photo-section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
