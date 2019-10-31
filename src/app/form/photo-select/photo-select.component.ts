@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
 
@@ -13,6 +13,9 @@ export class PhotoSelectComponent implements OnInit {
   userPicture = '';
   id;
   isShown: boolean = false;
+
+  @Input()
+  monster;
 
   @Output()
   sendAvatar = new EventEmitter<any>();
@@ -38,5 +41,7 @@ export class PhotoSelectComponent implements OnInit {
       this.sendAvatar.emit(this.userPicture);
     });
   }
+
+
 
 }

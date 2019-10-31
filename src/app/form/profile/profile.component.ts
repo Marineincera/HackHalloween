@@ -1,6 +1,6 @@
-import { User } from './../models/user';
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
+import { User } from '../../models/user';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 
 
@@ -10,13 +10,13 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  public users: User[];
+  public users: User;
 
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    const id = 1;
+    const id = 22;
     this.userService.getById(id).subscribe((users) => {
       this.users = users;
       console.log(this.users);

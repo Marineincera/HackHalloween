@@ -5,6 +5,9 @@ import { SelectsComponent } from './form/selects/selects.component';
 import { PhotoSelectComponent } from './form/photo-select/photo-select.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './form/profile/profile.component';
+import { SwipeComponent } from './swipe/swipe.component';
+import { MatchComponent } from './swipe/match/match.component';
 
 
 const routes: Routes = [
@@ -19,6 +22,15 @@ const routes: Routes = [
   },
   {
     path: 'form', component: FormComponent
+  },
+  {
+    path: 'profile', component: ProfileComponent
+  },
+  {
+    path: 'swipe', component: SwipeComponent
+  },
+  {
+    path: 'match', component: MatchComponent
   }
 
 

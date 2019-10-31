@@ -34,7 +34,6 @@ h1{
     text-align: center;
 }
 .finish{
-    width: 50%;
 background-color: #FF9b3D;
     box-shadow: none;
   border-radius: 40px;
@@ -46,4 +45,26 @@ background-color: #FF9b3D;
   padding: 10px 30px;
   transition: background-color .2s ease, box-shadow .2s ease;
   align-items: center;
+  width: 30%;
+}
+
+.photo-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../../assets/images/back.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }

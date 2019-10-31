@@ -10,16 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./swipe.component.scss']
 })
 export class SwipeComponent implements OnInit {
-  public users: User[];
+  public users: User;
+
+  isModalVisible = false;
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    const id = 2;
+    const id = 26;
     this.userService.getById(id).subscribe((users) => {
       this.users = users;
       console.log(this.users);
-  });
+    });
 
-}
+  }
+  showModal() {
+    this.isModalVisible = !this.isModalVisible;
+  }
 }

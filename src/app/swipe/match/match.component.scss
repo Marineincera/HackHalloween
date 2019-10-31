@@ -1,0 +1,27 @@
+.container {
+    background: rgba(0, 0, 0, 0.438);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+   }
+   // container div
+   .containerHTML{
+    margin : auto;
+    width:60vw;
+    height:50vh;
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+     z-index: 1;
+   }

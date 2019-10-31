@@ -1,7 +1,6 @@
 <h1>Première étape : Inscris toi ! </h1>
 
 <div class="form-wrapper">
-    <img src="../../assets/images/back.jpg">
     <form (submit)="myForm.valid" #myForm="ngForm">
         <div>
             <mat-form-field>
@@ -46,11 +45,15 @@
         </section>
 
         <button type="submit" [routerLink]="['/selects']" routerLinkActive="router-link-active"> Continues ton
-            inscription</button>
+            inscription
+        </button>
+        <!-- <button (click)="sendMonster()">Valider l'inscription</button> -->
     </form>
+
 </div>
+
 <app-selects (addBloody)=" changeBloody($event)" (addKawai)="changeKawai($event)"
     (addNocturnal)="changeNocturnal($event)" (addVicious)="changeVicious($event)" *ngIf="isShown"></app-selects>
 
-<app-photo-select (sendAvatar)="createMonster($event)" *ngIf="isShown"></app-photo-select>
-<button (click)="sendMonster()" *ngIf="isShown">Valider l'inscription</button>
+<app-photo-select (sendAvatar)="createMonster($event)" *ngIf="isShown" [monster]="userToSend"></app-photo-select>
+<app-profile></app-profile>

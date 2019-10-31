@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="container">
+    <h1>Ton profil</h1>
+    <img class="photo" src="{{users.picture}}" *ngIf="users" />
+    <p>Description: {{users.describe}}</p>
+    <!-- <p>Levelscary:{{users.levelscary}}</p>
+  <p>repulsive:{{users.repulsive}}</p> -->
+    <button (click)="goTo()" [routerLink]="['/swipe']" routerLinkActive="router-link-active">Go choper</button>
+  </div>
+</div>

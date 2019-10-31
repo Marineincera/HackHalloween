@@ -24,6 +24,8 @@ export class FormComponent implements OnInit {
     vicious: false,
   };
 
+  isShown: boolean = false;
+
 
   constructor(private service: UserService,
     private route: ActivatedRoute) { }
@@ -53,6 +55,7 @@ export class FormComponent implements OnInit {
   }
 
   createMonster(picture) {
+    this.isShown = true;
     this.user.picture = picture;
     console.log(this.user);
   }
@@ -72,6 +75,9 @@ export class FormComponent implements OnInit {
       vicious: this.user.vicious
     };
     this.service.create(userToSend)
-      .subscribe();
+      .subscribe(() => {
+        console.log(userToSend);
+      });
+
   }
 }
