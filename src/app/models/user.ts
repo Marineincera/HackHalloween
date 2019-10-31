@@ -1,4 +1,5 @@
 export class User {
+
     name: string;
     age: number;
     sex: string;
@@ -14,5 +15,6 @@ export class User {
     constructor(input?: User) {
         Object.assign(this, input);
     }
+
 }
 

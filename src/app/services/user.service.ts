@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,4 +21,10 @@ export class UserService {
   create(post): Observable<any> {
     return this.http.post(UserService.URL + '/user/add', JSON.stringify(post));
   }
+
+
+  public getById(id: number): Observable<any> {
+    return this.http.get(UserService.URL + `/user/show/${id}`);
+  }
+
 }
