@@ -1,1 +1,54 @@
-<p>form works!</p>
+<h1>Première étape : Inscris toi ! </h1>
+
+<div class="form-wrapper">
+    <form (submit)="myForm.valid" #myForm="ngForm">
+        <div>
+            <mat-form-field>
+                <!-- <label for="name">Name</label> -->
+                <input matInput type="text" name="name" [(ngModel)]="user.name" #nameRef="ngModel" app-selects
+                    placeholder="un nom bien terrifiant !" required>
+                <div *ngIf="nameRef?.errors?.required && myForm.submitted" class="control">
+                    <p>Il nous faut ton nom de monstre pour aller plus loin ! </p>
+                </div>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <!-- <label for="age">Âge</label> -->
+                <input matInput type="number" name="age" [(ngModel)]="user.age" #ageRef="ngModel"
+                    placeholder="Quel âge as-tu ?" required>
+                <div *ngIf="ageRef?.errors?.required && myForm.submitted" class="control">
+                    <p>Sois pas si timide ! </p>
+                </div>
+                <div *ngIf="ageRef?.errors?.number && myForm.submitted" class="control">
+                    <p>Entre un nombre</p>
+                </div>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <!-- <label for="description">Description</label> -->
+                <textarea matInput name="description" [(ngModel)]="user.describe" #descriptionRef="ngModel"
+                    placeholder="Petite description" required></textarea>
+                <div *ngIf="descriptionRef?.errors?.required && myForm.submitted" class="control">
+                    <p>Donne nous ce petit détail qui fait de toi un monstre si attachant !</p>
+                </div>
+            </mat-form-field>
+        </div>
+
+        <section class="example-section">
+            <label class="example-margin">Sexe :</label>
+            <mat-radio-group [(ngModel)]="user.sex" #sexeRef="ngModel" name="sexe">
+                <mat-radio-button class="example-margin" value="Mâle">Mâle</mat-radio-button>
+                <mat-radio-button class="example-margin" value="Femelle">Femelle</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <button type="submit"> Continues ton inscription</button>
+    </form>
+</div>
+<app-selects (addBloody)=" changeBloody($event)" (addKawai)="changeKawai($event)"
+    (addNocturnal)="changeNocturnal($event)" (addVicious)="changeVicious($event)"></app-selects>
+
+<app-photo-select (sendAvatar)="createMonster($event)"></app-photo-select>
+<button (click)="sendMonster()">Valider l'inscription</button>

@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FormComponent } from './form/form.component';
+
+import { SelectsComponent } from './form/selects/selects.component';
+import { PhotoSelectComponent } from './form/photo-select/photo-select.component';
 
 
 const routes: Routes = [
-  { path: 'form', component: FormComponent},
+  {
+    path: 'selects', component: SelectsComponent
+  },
+  {
+    path: 'photo-select', component: PhotoSelectComponent
+  }
+
+
 ];
 
 @NgModule({

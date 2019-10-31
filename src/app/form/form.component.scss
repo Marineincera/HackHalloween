@@ -1,0 +1,69 @@
+.form-wrapper{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .control {
+            font-size: 10px;
+        }
+   
+
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-left: -3vw;
+
+            input, textarea{
+                width: 100%;
+            }
+
+            textarea{
+            }
+            
+            .control{
+                margin: 0px;
+                text-align: center;
+                align-self: center;
+                width: 100%;
+            }
+        }
+        Div, button{
+        margin: 2vh 0vw;
+        }
+
+        button{
+            width: 40%;
+            
+        }
+
+    }
+.example-margin{
+    margin: 10px;
+}
+
+mat-form-field{
+    width: fit-content;
+    margin: -3vw;
+}
+
+mat-form-field-wrapper{
+    margin-left: -3vw;
+}
+}
+
+h1{
+    font-size: 20px;
+    color: #ff9b3d;
+    text-align: center;
+}
